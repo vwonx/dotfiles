@@ -18,8 +18,8 @@ vim.g.mapleader = keys.leader_key
 vim.g.maplocalleader = keys.leader_key
 
 -- quick move
-keymap({ "n", "v" }, keys.n_v_5j, "5j")
-keymap({ "n", "v" }, keys.n_v_5k, "5k")
+-- keymap({ "n", "v" }, keys.n_v_5j, "5j")
+-- keymap({ "n", "v" }, keys.n_v_5k, "5k")
 -- keymap({ "n", "v" }, keys.n_v_10j, "10j")
 -- keymap({ "n", "v" }, keys.n_v_10k, "10k")
 keymap("i", keys.i_line_head, "<ESC>I")

@@ -44,7 +44,7 @@ vim.o.ignorecase = true
 vim.o.smartcase = true
 
 -- search hight
-vim.opt.hlsearch = false
+vim.opt.hlsearch = true
 vim.o.incsearch = true
 
 -- command line height
