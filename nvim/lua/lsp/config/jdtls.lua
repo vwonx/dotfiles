@@ -5,9 +5,6 @@ local workspace_dir = "/Users/sid/Code/java/.jdtls/" .. project_name
 local opts = {
   capabilities = common.capabilities,
   flags = common.flags,
-  on_attach = function(client, bufnr)
-    common.disableFormat(client)
-  end,
   cmd = {
     "java",
     "-Declipse.application=org.eclipse.jdt.ls.core.id1",

@@ -6,9 +6,9 @@ M.flags = {
   debounce_text_changes = 150,
 }
 
-M.disableFormat = function(client)
-  client.server_capabilities.document_formatting = false
-  client.server_capabilities.document_range_formatting = false
-end
+-- M.disableFormat = function(client)
+--   client.server_capabilities.document_formatting = false
+--   client.server_capabilities.document_range_formatting = false
+-- end
 
 return M

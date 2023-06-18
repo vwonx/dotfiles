@@ -18,9 +18,6 @@ local opts = {
     completeUnimported = true,
     semanticHighlighting = true,
   },
-  on_attach = function(client, bufnr)
-    common.disableFormat(client)
-  end,
 }
 
 return {

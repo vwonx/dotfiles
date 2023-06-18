@@ -5,14 +5,11 @@ local opts = {
     Lua = {
       diagnostics = {
         -- Get the language server to recognize the `vim` global
-        globals = {'vim', 'colorscheme'},
+        globals = { 'vim', 'colorscheme' },
       },
     },
   },
   flags = common.flags,
-  on_attach = function(client, bufnr)
-    common.disableFormat(client)
-  end,
 }
 return {
   on_setup = function(server)
