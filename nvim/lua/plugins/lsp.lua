@@ -13,7 +13,8 @@ return {
         lua_ls = require("lsp.config.lua"),
         clangd = require("lsp.config.clangd"),
         cmake = require("lsp.config.cmake"),
-        jdtls = require("lsp.config.jdtls"),
+        -- jdtls = require("lsp.config.jdtls"),
+        rust_analyzer = require("lsp.config.rust_analyzer"),
       }
       local lspconfig = require("lspconfig")
 
@@ -32,6 +33,7 @@ return {
   -- mason
   {
     "williamboman/mason.nvim",
+    build = ":MasonUpdate", -- :MasonUpdate updates registry contents
     cmd = "Mason",
     opts = {
       ui = {
@@ -53,7 +55,8 @@ return {
         "lua_ls",
         "clangd",
         "cmake",
-        "jdtls",
+        -- "jdtls",
+        "rust_analyzer",
       }
     }
   },

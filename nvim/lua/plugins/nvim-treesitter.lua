@@ -6,7 +6,7 @@ return {{
   event = { "BufReadPost", "BufNewFile" },
   opts = {
     -- A list of parser names, or "all" (the first five listed parsers should always be installed)
-    ensure_installed = { "c", "lua", "vim", "vimdoc", "query" ,"cpp", "cmake", "java" },
+    ensure_installed = { "c", "lua", "vim", "vimdoc", "query" ,"cpp", "cmake", "java", "rust" },
     highlight = {
       enable = true,
     },
