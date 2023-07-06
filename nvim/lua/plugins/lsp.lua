@@ -71,4 +71,9 @@ return {
       }
     }
   },
+
+  -- rust-tool
+  {
+    "simrat39/rust-tools.nvim"
+  }
 }
