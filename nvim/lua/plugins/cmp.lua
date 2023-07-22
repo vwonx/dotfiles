@@ -1,7 +1,8 @@
 local keys = require("utils.global-keys-mapping").cmp
-return {{
+return { {
   "hrsh7th/nvim-cmp",
-  event = { "InsertEnter", "CmdlineChanged" },
+  -- event = { "InsertEnter", "CmdlineChanged" },
+  lazy = false,
   dependencies = {
     -- sources
     "hrsh7th/cmp-nvim-lsp",
@@ -12,10 +13,6 @@ return {{
     "hrsh7th/cmp-vsnip",
     "hrsh7th/vim-vsnip",
     "rafamadriz/friendly-snippets",
-  },
-  keys = {
-    { keys.select_next_item, "<C-n>", mode = "c", desc = "Cmd-cmp select next item", remap = true, silent = true },
-    { keys.select_prev_item, "<C-p>", mode = "c", desc = "Cmd-cmp select prev item", remap  =true, silent = true },
   },
   opts = function()
     local cmp = require("cmp")
@@ -37,20 +34,20 @@ return {{
       }),
       [keys.scroll_doc_up] = cmp.mapping(cmp.mapping.scroll_docs(-4), { "i", "c" }),
       [keys.scroll_doc_down] = cmp.mapping(cmp.mapping.scroll_docs(4), { "i", "c" }),
-      [keys.select_prev_item] = cmp.mapping.select_prev_item(),
-      [keys.select_next_item] = cmp.mapping.select_next_item(),
+      [keys.select_prev_item] = cmp.mapping(cmp.mapping.select_prev_item(), { "i", "c" }),
+      [keys.select_next_item] = cmp.mapping(cmp.mapping.select_next_item(), { "i", "c" }),
 
       ["<A-l>"] = cmp.mapping(function(_)
         if vim.fn["vsnip#available"](1) == 1 then
           feedkey("<Plug>(vsnip-expand-or-jump)", "")
         end
-      end, {"i", "s"}),
+      end, { "i", "s" }),
 
       ["<A-h>"] = cmp.mapping(function()
         if vim.fn["vsnip#jumpable"](-1) == 1 then
           feedkey("<Plug>(vsnip-jump-prev)", "")
         end
-      end, {"i", "s"}),
+      end, { "i", "s" }),
     }
     -- Use buffer source for `/` (if you enabled `native_menu`, this won't work anymore).
     cmp.setup.cmdline({ '/' }, {
@@ -66,8 +63,8 @@ return {{
       sources = cmp.config.sources({
         { name = 'path' }
       }, {
-          { name = 'cmdline' }
-        })
+        { name = 'cmdline' }
+      })
     })
 
     cmp.setup.filetype({ "markdown", "help", "gitcommit" }, {
@@ -77,11 +74,12 @@ return {{
       sources = { {
         name = "luasnip",
       }, {
-          name = "buffer",
-        }, {
-          name = "path",
-        } },
+        name = "buffer",
+      }, {
+        name = "path",
+      } },
     })
+
 
     return {
       snippet = {
@@ -114,4 +112,4 @@ return {{
       }),
     }
   end
-}}
+} }
