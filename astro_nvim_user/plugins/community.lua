@@ -8,5 +8,9 @@ return {
   {
     "Civitasv/cmake-tools.nvim",
     enabled = false,
-  }
+  },
+  { import = "astrocommunity.pack.rust" },
+
+  -- motion
+  { import = "astrocommunity.motion.flash-nvim" },
 }

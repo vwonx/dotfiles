@@ -7,4 +7,7 @@ return {
     list = true,
     listchars = "space:⋅",
   },
+  g = {
+    -- codelens_enabled = false,
+  }
 }
