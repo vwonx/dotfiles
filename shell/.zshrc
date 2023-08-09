@@ -156,5 +156,8 @@ function proxy_off(){
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# LLVM
+export PATH="/usr/local/opt/llvm/bin:$PATH"
+
 # End user configuration
 
