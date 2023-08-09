@@ -4,6 +4,7 @@ return {
 
   -- Pack
   { import = "astrocommunity.pack.lua" },
+  { import = "astrocommunity.pack.cmake" },
   { import = "astrocommunity.pack.cpp" },
   {
     "Civitasv/cmake-tools.nvim",
