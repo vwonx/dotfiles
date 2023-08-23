@@ -21,6 +21,7 @@ opt.inccommand = "nosplit" -- preview incremental substitute
 opt.laststatus = 0
 opt.list = true -- Show some invisible characters (tabs...
 opt.number = true -- Print line number
+opt.relativenumber = true -- Relative number
 opt.pumblend = 10 -- Popup blend
 opt.pumheight = 10 -- Maximum number of entries in a popup
 opt.scrolloff = 4 -- Lines of context
