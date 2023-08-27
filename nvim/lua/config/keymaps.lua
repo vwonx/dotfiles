@@ -19,7 +19,7 @@ map({ "n", "x" }, "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true
 map({ "n", "x" }, "k", "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
 
 -- Move to begin/end in insert mode
-map("i", "<c-h>", "<ESC>I", { desc = "Move cursor to the head of the line" })
+map("i", "<C-h>", "<ESC>I", { desc = "Move cursor to the head of the line" })
 map("i", "<C-l>", "<ESC>A", { desc = "Move cursor to the tail of the line" })
 
 -- Move to window using the <ctrl> hjkl keys
@@ -29,10 +29,10 @@ map("n", "<C-k>", "<C-w>k", { desc = "Go to upper window", remap = true })
 map("n", "<C-l>", "<C-w>l", { desc = "Go to right window", remap = true })
 
 -- Resize window using <ctrl> arrow keys
-map("n", "<C-Up>", "<cmd>resize +2<cr>", { desc = "Increase window height" })
-map("n", "<C-Down>", "<cmd>resize -2<cr>", { desc = "Decrease window height" })
-map("n", "<C-Left>", "<cmd>vertical resize -2<cr>", { desc = "Decrease window width" })
-map("n", "<C-Right>", "<cmd>vertical resize +2<cr>", { desc = "Increase window width" })
+map("n", "<A-Up>", "<cmd>resize +2<cr>", { desc = "Increase window height" })
+map("n", "<A-Down>", "<cmd>resize -2<cr>", { desc = "Decrease window height" })
+map("n", "<A-Left>", "<cmd>vertical resize -2<cr>", { desc = "Decrease window width" })
+map("n", "<A-Right>", "<cmd>vertical resize +2<cr>", { desc = "Increase window width" })
 
 -- Move Lines
 map("n", "<A-j>", "<cmd>m .+1<cr>==", { desc = "Move down" })

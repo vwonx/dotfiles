@@ -46,7 +46,12 @@ local cmp = {
     end
 
     return {
-      enabled = true,
+      enabled = function()
+        if vim.bo.buftype == 'prompt' then
+          return false
+        end
+        return true
+      end,
       preselect = cmp.PreselectMode.None,
       formatting = {
         format = function(entry, item)

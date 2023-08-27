@@ -1,6 +1,5 @@
 local nvim_navic = {
   "SmiteshP/nvim-navic",
-  lazy = true,
   opts = {
     separator = "  ",
     highlight = true,

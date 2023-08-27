@@ -27,6 +27,7 @@ end
 
 local animate = {
   "echasnovski/mini.animate",
+  enabled=false,
   event = { "BufReadPre", "BufNewFile" },
 }
 

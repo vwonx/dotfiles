@@ -14,3 +14,9 @@ vim.api.nvim_create_autocmd("BufWritePre", {
   pattern = {"*"},
   command = [[%s/\s\+$//e]],
 })
+
+vim.api.nvim_create_autocmd("CursorHold", {
+  group = getAutoGroup("PopUpDiagnostics"),
+  pattern = {"*"},
+  command = "lua vim.diagnostic.open_float()",
+})

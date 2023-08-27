@@ -8,6 +8,7 @@ local nvim_lspconfig = {
 
 function nvim_lspconfig.config()
   local lspconfig = require("lspconfig")
+  require('lspconfig.ui.windows').default_options.border = "rounded"
 
   for name, config in pairs(lsp_info.servers) do
     if config ~= nil and type(config) == "table" then
@@ -27,6 +28,7 @@ local mason = {
   cmd = "Mason",
   opts = {
     ui = {
+      border = "rounded",
       icons = {
         package_installed = "✓",
         package_pending = "➜",

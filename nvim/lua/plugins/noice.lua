@@ -1,4 +1,13 @@
-local M = {
+local nvim_notify = {
+  "rcarriga/nvim-notify",
+  event = "VeryLazy",
+  opts = {
+    -- use for transparent background
+    background_colour = "#000000"
+  }
+}
+
+local noice = {
   "folke/noice.nvim",
   event = "VeryLazy",
   dependencies = {
@@ -29,4 +38,5 @@ local M = {
   },
 }
 
+local M = { nvim_notify, noice }
 return M

@@ -10,6 +10,7 @@ local M = {
       enable = true,
     },
     renderer = {
+      highlight_git = true,
       icons = {
         git_placement = "after",
         glyphs = {

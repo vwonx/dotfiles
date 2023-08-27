@@ -7,9 +7,12 @@ local M = {
     { "]b", "<cmd>BufferLineCycleNext<cr>", desc = "Next buffer" },
     { "<leader>bo", "<cmd>BufferLineCloseOthers<CR>", desc = "Delete buffers except current" },
   },
-  opts = {
+}
+
+M.config = function(_, opts)
+  require("bufferline").setup {
+    highlights = require("catppuccin.groups.integrations.bufferline").get(),
     options = {
-      separator_style = "slope",
       numbers = "ordinal",
       offsets = {
         {
@@ -22,6 +25,6 @@ local M = {
       },
     },
   }
-}
+end
 
 return M
