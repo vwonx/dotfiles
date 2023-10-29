@@ -156,8 +156,12 @@ function proxy_off(){
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# LLVM
-export PATH="/usr/local/opt/llvm/bin:$PATH"
+# nvim
+export PATH=~/software/nvim-linux64/bin:$PATH
+
+# repo
+export PATH=~/bin:$PATH
+
 
 # End user configuration
 
