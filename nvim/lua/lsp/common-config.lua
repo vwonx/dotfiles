@@ -1,7 +1,7 @@
 local M = {}
 
 M.key_attach = function(bufnr)
-  vim.keymap.set("n", "<leader>le", vim.diagnostic.open_float, { desc = "Line Diagnostics" })
+  vim.keymap.set("n", "<leader>ld", vim.diagnostic.open_float, { desc = "Line Diagnostics" })
   vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Prev Diagnostic" })
   vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Next Diagnostic" })
   vim.keymap.set("n", "gD", vim.lsp.buf.declaration, { buffer = bufnr, desc = "Goto Declaration" })
