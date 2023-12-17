@@ -162,6 +162,8 @@ export PATH=~/software/nvim-linux64/bin:$PATH
 # repo
 export PATH=~/bin:$PATH
 
+# v8 export
+alias v8l="export PATH=~/code/v8/depot_tools:$PATH"
 
 # End user configuration
 
