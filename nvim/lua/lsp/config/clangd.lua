@@ -6,6 +6,7 @@ local opts = {
   cmd = {
     "clangd",
     "--header-insertion=never",
+    "--function-arg-placeholders=0",
   },
   on_attach = function(client, bufnr)
     common.disable_format(client)
