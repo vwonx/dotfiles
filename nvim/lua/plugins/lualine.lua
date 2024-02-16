@@ -3,7 +3,7 @@ local nvim_navic = {
   opts = {
     -- separator = "  ",
     separator = "  ",
-    highlight = true,
+    -- highlight = true,
     depth_limit = 5,
   }
 }
@@ -14,7 +14,7 @@ local lualine = {
   event = "VeryLazy",
   opts = {
     options = {
-      theme = "catppuccin",
+      -- theme = "catppuccin",
       section_separators = { left = '', right = '' },
       component_separators = { left = '', right = '' }
       -- section_separators = { left = '', right = '' },

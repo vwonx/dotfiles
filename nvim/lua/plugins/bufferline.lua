@@ -11,7 +11,6 @@ local M = {
 
 M.config = function(_, opts)
   require("bufferline").setup {
-    highlights = require("catppuccin.groups.integrations.bufferline").get(),
     options = {
       numbers = "ordinal",
       offsets = {

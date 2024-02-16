@@ -1,4 +1,4 @@
-local M = {
+local catppuccin = {
   "catppuccin/nvim",
   lazy = false, -- make sure we load this during startup if it is your main colorscheme
   priority = 1000, -- make sure to load this before all the other start plugins
@@ -11,13 +11,30 @@ local M = {
       cmp = true,
     },
     transparent_background = true,
-  }
+  },
+  config = function(_, opts)
+    require("catppuccin").setup(opts)
+  end
 }
 
-function M.config(_, opts)
-  require("catppuccin").setup(opts)
-  -- load the colorscheme here
-  vim.cmd([[colorscheme catppuccin-mocha]])
-end
+local moonfly = {
+  "bluz71/vim-moonfly-colors",
+  lazy = false, -- make sure we load this during startup if it is your main colorscheme
+  priority = 1000, -- make sure to load this before all the other start plugins
+  config = function(_, opts)
+    vim.g.moonflyWinSeparator = 2
+  end
+}
 
+local nightfox = {
+  "EdenEast/nightfox.nvim",
+  lazy = false, -- make sure we load this during startup if it is your main colorscheme
+  priority = 1000, -- make sure to load this before all the other start plugins
+  config = function(_, opts)
+    -- load the colorscheme here
+    vim.cmd([[colorscheme carbonfox]])
+  end
+}
+
+local M = {catppuccin, moonfly, nightfox}
 return M
