@@ -141,6 +141,9 @@ unset key
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+# TERM
+export TERM=tmux-256color
+
 # Proxy setting
 function proxy_on() {
     export http_proxy=http://127.0.0.1:4780
