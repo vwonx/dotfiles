@@ -29,18 +29,18 @@ map("n", "<C-k>", "<C-w>k", { desc = "Go to upper window", remap = true })
 map("n", "<C-l>", "<C-w>l", { desc = "Go to right window", remap = true })
 
 -- Resize window using <ctrl> arrow keys
-map("n", "<A-Up>", "<cmd>resize +2<cr>", { desc = "Increase window height" })
-map("n", "<A-Down>", "<cmd>resize -2<cr>", { desc = "Decrease window height" })
-map("n", "<A-Left>", "<cmd>vertical resize -2<cr>", { desc = "Decrease window width" })
-map("n", "<A-Right>", "<cmd>vertical resize +2<cr>", { desc = "Increase window width" })
+-- map("n", "<A-Up>", "<cmd>resize +2<cr>", { desc = "Increase window height" })
+-- map("n", "<A-Down>", "<cmd>resize -2<cr>", { desc = "Decrease window height" })
+-- map("n", "<A-Left>", "<cmd>vertical resize -2<cr>", { desc = "Decrease window width" })
+-- map("n", "<A-Right>", "<cmd>vertical resize +2<cr>", { desc = "Increase window width" })
 
 -- Move Lines
-map("n", "<A-d>", "<cmd>m .+1<cr>==", { desc = "Move down" })
-map("n", "<A-u>", "<cmd>m .-2<cr>==", { desc = "Move up" })
-map("i", "<A-d>", "<esc><cmd>m .+1<cr>==gi", { desc = "Move down" })
-map("i", "<A-u>", "<esc><cmd>m .-2<cr>==gi", { desc = "Move up" })
-map("v", "<A-d>", ":m '>+1<cr>gv=gv", { desc = "Move down" })
-map("v", "<A-u>", ":m '<-2<cr>gv=gv", { desc = "Move up" })
+map("n", "<A-Down>", "<cmd>m .+1<cr>==", { desc = "Move down" })
+map("n", "<A-Up>", "<cmd>m .-2<cr>==", { desc = "Move up" })
+map("i", "<A-Down>", "<esc><cmd>m .+1<cr>==gi", { desc = "Move down" })
+map("i", "<A-Up>", "<esc><cmd>m .-2<cr>==gi", { desc = "Move up" })
+map("v", "<A-Down>", ":m '>+1<cr>gv=gv", { desc = "Move down" })
+map("v", "<A-Up>", ":m '<-2<cr>gv=gv", { desc = "Move up" })
 
 -- Clear search with <esc>
 map({ "i", "n" }, "<esc>", "<cmd>noh<cr><esc>", { desc = "Escape and clear hlsearch" })
