@@ -15,13 +15,13 @@ local M = {
         git_placement = "after",
         glyphs = {
           git = {
-            unstaged = "[U]",
-            staged = "[S]",
+            unstaged = "[u]",
+            staged = "[s]",
             unmerged = "[]",
-            renamed = "[R]",
+            renamed = "[r]",
             untracked = "[+]",
             deleted = "[-]",
-            ignored = "[I]",
+            ignored = "[i]",
           },
         },
       },

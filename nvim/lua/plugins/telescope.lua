@@ -1,4 +1,4 @@
-local Util = require("util")
+local util = require("util")
 
 local M = {
   "nvim-telescope/telescope.nvim",
@@ -6,17 +6,17 @@ local M = {
   cmd = "Telescope",
   keys = {
     -- find
-    { "<leader>fF", Util.telescope("files"), desc = "Find Files (root dir)" },
-    { "<leader>ff", Util.telescope("files", { cwd = false }), desc = "Find Files (cwd)" },
+    { "<leader>fF", util.telescope("files"), desc = "Find Files (root dir)" },
+    { "<leader>ff", util.telescope("files", { cwd = false }), desc = "Find Files (cwd)" },
     { "<leader>fR", "<cmd>Telescope oldfiles<cr>", desc = "Recent" },
-    { "<leader>fr", Util.telescope("oldfiles", { cwd = vim.loop.cwd() }), desc = "Recent (cwd)" },
+    { "<leader>fr", util.telescope("oldfiles", { cwd = vim.loop.cwd() }), desc = "Recent (cwd)" },
     -- search
     { "<leader>sb", "<cmd>Telescope current_buffer_fuzzy_find<cr>", desc = "Buffer" },
     { "<leader>sd", "<cmd>Telescope diagnostics bufnr=0<cr>", desc = "Document diagnostics" },
     { "<leader>sD", "<cmd>Telescope diagnostics<cr>", desc = "Workspace diagnostics" },
-    { "<leader>sW", Util.telescope("live_grep"), desc = "Grep (root dir)" },
-    { "<leader>sw", Util.telescope("live_grep", { cwd = false }), desc = "Grep (cwd)" },
-    { "<leader>cs", Util.telescope("colorscheme", { enable_preview = true }), desc = "Colorscheme with preview" },
+    { "<leader>sW", util.telescope("live_grep"), desc = "Grep (root dir)" },
+    { "<leader>sw", util.telescope("live_grep", { cwd = false }), desc = "Grep (cwd)" },
+    { "<leader>cs", util.telescope("colorscheme", { enable_preview = true }), desc = "Colorscheme with preview" },
     -- keymap
     { "<leader>fk", "<cmd>Telescope keymaps<cr>", desc = "Show KeyMaps" },
   },
