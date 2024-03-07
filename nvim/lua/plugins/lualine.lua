@@ -16,9 +16,9 @@ local lualine = {
     options = {
       -- theme = "catppuccin",
       section_separators = { left = '', right = '' },
-      component_separators = { left = '', right = '' }
+      component_separators = { left = '', right = '' },
       -- section_separators = { left = '', right = '' },
-      -- globalstatus = true,
+      globalstatus = true,
     },
     extensions = { "nvim-tree", "lazy" },
     sections = {

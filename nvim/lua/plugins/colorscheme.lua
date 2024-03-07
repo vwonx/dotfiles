@@ -23,6 +23,8 @@ local moonfly = {
   priority = 1000, -- make sure to load this before all the other start plugins
   config = function(_, opts)
     vim.g.moonflyWinSeparator = 2
+    -- load the colorscheme here
+    vim.cmd([[colorscheme moonfly]])
   end
 }
 
@@ -30,10 +32,10 @@ local nightfox = {
   "EdenEast/nightfox.nvim",
   lazy = false, -- make sure we load this during startup if it is your main colorscheme
   priority = 1000, -- make sure to load this before all the other start plugins
-  config = function(_, opts)
-    -- load the colorscheme here
-    vim.cmd([[colorscheme carbonfox]])
-  end
+  -- config = function(_, opts)
+  --   -- load the colorscheme here
+  --   vim.cmd([[colorscheme carbonfox]])
+  -- end
 }
 
 local M = {catppuccin, moonfly, nightfox}
