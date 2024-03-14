@@ -1,9 +1,7 @@
 local nvim_navic = {
   "SmiteshP/nvim-navic",
   opts = {
-    -- separator = "  ",
-    separator = "  ",
-    -- highlight = true,
+    highlight = true,
     depth_limit = 5,
   }
 }
@@ -14,19 +12,40 @@ local lualine = {
   event = "VeryLazy",
   opts = {
     options = {
-      -- theme = "catppuccin",
-      section_separators = { left = '', right = '' },
-      component_separators = { left = '', right = '' },
-      -- section_separators = { left = '', right = '' },
       globalstatus = true,
     },
     extensions = { "nvim-tree", "lazy" },
     sections = {
       lualine_c = {
-        { "filetype", icon_only = true, separator = "", padding = { left = 1, right = 0 } },
-        { "filename", path = 1, symbols = { modified = "  ", readonly = "", unnamed = "" } },
         { "navic" },
       },
+      lualine_x = {
+        {
+          -- Lsp server name .
+          function()
+            local msg = "No Active Lsp"
+            local buf_ft = vim.api.nvim_buf_get_option(0, "filetype")
+            local clients = vim.lsp.get_active_clients()
+            if next(clients) == nil then
+              return msg
+            end
+            for _, client in ipairs(clients) do
+              local filetypes = client.config.filetypes
+              if filetypes and vim.fn.index(filetypes, buf_ft) ~= -1 then
+                return client.name
+              end
+            end
+            return msg
+          end,
+          icon = " LSP:",
+          color = { fg = "#51afef", gui = "bold" },
+        },
+        {
+          "encoding",
+          color = { fg = "#98be65", gui = "bold" },
+        },
+        "fileformat",
+      }
     },
   },
 }

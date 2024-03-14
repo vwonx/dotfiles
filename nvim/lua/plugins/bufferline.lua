@@ -1,6 +1,7 @@
 local M = {
   "akinsho/bufferline.nvim",
   dependencies = { "nvim-tree/nvim-web-devicons" },
+  enabled = false,
   event = "VeryLazy",
   keys = {
     { "[b", "<cmd>BufferLineCyclePrev<cr>", desc = "Prev buffer" },
