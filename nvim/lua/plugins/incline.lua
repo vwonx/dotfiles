@@ -26,6 +26,10 @@ local M = {
           ' ',
           guibg = '#44406e',
         }
+        local modified = vim.api.nvim_get_option_value("modified", { buf = props.buf });
+        if modified then
+          table.insert(res, { { "● ", guifg="green" } })
+        end
         return res
       end,
     }
