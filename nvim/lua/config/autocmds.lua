@@ -5,7 +5,7 @@ end
 -- set different indent to lua file
 vim.api.nvim_create_autocmd("FileType", {
   group = getAutoGroup("LuaFormatWidth"),
-  pattern = "lua",
+  pattern = "lua,javascript,typescript",
   command = "setlocal shiftwidth=2 tabstop=2"
 })
 
