@@ -10,6 +10,9 @@ local M = {
         padding = 0,
         margin = { horizontal = 0, vertical = 0 },
       },
+      hide = {
+        cursorline = true,
+      },
       render = function(props)
         local file = vim.api.nvim_buf_get_name(props.buf);
         local filepath = vim.fn.fnamemodify(file, ":p:.")
