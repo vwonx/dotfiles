@@ -1,7 +1,14 @@
 local M = {
   "aserowy/tmux.nvim",
   event = "VeryLazy",
-  config = function() return require("tmux").setup() end
+  opts = {
+    copy_sync = {
+        enable = false,
+    }
+  },
+  config = function(_, opts)
+    return require("tmux").setup(opts)
+  end
 }
 
 return M
