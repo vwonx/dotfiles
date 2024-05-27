@@ -13,6 +13,7 @@ local lualine = {
   opts = {
     options = {
       globalstatus = true,
+      theme = "jellybeans",
     },
     extensions = { "nvim-tree", "lazy" },
     sections = {
@@ -40,11 +41,14 @@ local lualine = {
           icon = " LSP:",
           color = { fg = "#51afef", gui = "bold" },
         },
+      },
+      lualine_y = {
         {
           "encoding",
           color = { fg = "#98be65", gui = "bold" },
         },
         "fileformat",
+        "progress"
       }
     },
   },
