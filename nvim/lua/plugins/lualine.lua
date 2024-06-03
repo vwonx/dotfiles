@@ -13,7 +13,7 @@ local lualine = {
   opts = {
     options = {
       globalstatus = true,
-      theme = "jellybeans",
+      -- theme = "jellybeans",
     },
     extensions = { "nvim-tree", "lazy" },
     sections = {
