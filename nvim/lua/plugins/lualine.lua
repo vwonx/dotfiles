@@ -38,15 +38,12 @@ local lualine = {
             end
             return msg
           end,
-          icon = " LSP:",
-          color = { fg = "#51afef", gui = "bold" },
+          icon = ":",
+          color = { fg = "#98be65", gui = "bold" },
         },
       },
       lualine_y = {
-        {
-          "encoding",
-          color = { fg = "#98be65", gui = "bold" },
-        },
+        "encoding",
         "fileformat",
         "progress"
       }

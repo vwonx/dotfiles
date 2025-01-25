@@ -61,3 +61,6 @@ map("v", ">", ">gv")
 map("n", "<leader>q", "<C-W>c", { desc = "Delete window", remap = true })
 map("n", "<leader>-", "<C-W>s", { desc = "Split window below", remap = true })
 map("n", "<leader>|", "<C-W>v", { desc = "Split window right", remap = true })
+
+-- autocommand
+map("n", "<leader>ih", ":InsertHeader<CR>", { desc = "Insert header of comment", noremap = true, silent = true})

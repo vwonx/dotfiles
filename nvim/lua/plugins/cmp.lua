@@ -17,7 +17,7 @@ local luasnip = {
     store_selection_keys = "<C-x>",
   },
   keys = {
-    { "<a-l>", function() require("luasnip").jump(1) end, mode = "s" },
+    { "<a-l>", function() require("luasnip").jump(1) end, mode = { "i", "s" } },
     { "<a-h>", function() require("luasnip").jump(-1) end, mode = { "i", "s" } },
   },
   config = function(_, opts)
