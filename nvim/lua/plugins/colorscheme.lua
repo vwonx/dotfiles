@@ -11,7 +11,7 @@ local catppuccin = {
       cmp = true,
       navic = true,
     },
-    transparent_background = false,
+    transparent_background = true,
   },
   config = function(_, opts)
     require("catppuccin").setup(opts)

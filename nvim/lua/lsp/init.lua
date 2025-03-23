@@ -10,11 +10,6 @@ M.treesitter_install = util.list_insert_unique(M.treesitter_install, { "cpp" })
 M.mason_lspconfig_install = util.list_insert_unique(M.mason_lspconfig_install, { "clangd" })
 M.servers["clangd"] = require("lsp.config.clangd")
 
--- js/ts
-M.treesitter_install = util.list_insert_unique(M.treesitter_install, { "javascript", "typescript", "tsx", "jsdoc" })
-M.mason_lspconfig_install = util.list_insert_unique(M.mason_lspconfig_install, { "tsserver" })
-M.servers["tsserver"] = require("lsp.config.default")
-
 -- cmake
 M.treesitter_install = util.list_insert_unique(M.treesitter_install, { "cmake" })
 M.mason_lspconfig_install = util.list_insert_unique(M.mason_lspconfig_install, { "cmake" })
