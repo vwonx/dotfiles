@@ -6,8 +6,8 @@ local M = {
   build = ":TSUpdate",
   event = { "BufReadPost", "BufNewFile" },
   opts = {
-    ensure_installed = util.list_insert_unique({ "c", "lua", "vim", "vimdoc", "query", "markdown", "markdown_inline" },
-                                                lsp_info.treesitter_install),
+    ensure_installed = util.list_insert_unique({ "c", "lua", "vim", "vimdoc", "query", "markdown", "markdown_inline",
+                                                 "regex", "bash"}, lsp_info.treesitter_install),
     highlight = {
       enable = true,
       disable = function(lang, buf)
