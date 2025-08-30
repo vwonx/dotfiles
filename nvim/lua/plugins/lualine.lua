@@ -22,23 +22,16 @@ local lualine = {
       },
       lualine_x = {
         {
-          -- Lsp server name .
-          function()
-            local msg = "No Active Lsp"
-            local buf_ft = vim.api.nvim_buf_get_option(0, "filetype")
-            local clients = vim.lsp.get_active_clients()
-            if next(clients) == nil then
-              return msg
-            end
-            for _, client in ipairs(clients) do
-              local filetypes = client.config.filetypes
-              if filetypes and vim.fn.index(filetypes, buf_ft) ~= -1 then
-                return client.name
-              end
-            end
-            return msg
-          end,
-          icon = ":",
+          'lsp_status',
+          icon = '', -- f013
+          symbols = {
+            -- Standard unicode symbols to cycle through for LSP progress:
+            spinner = { '⠋', '⠙', '⠹', '⠸', '⠼', '⠴', '⠦', '⠧', '⠇', '⠏' },
+            -- Standard unicode symbol for when LSP is done:
+            done = '✓',
+            -- Delimiter inserted between LSP names:
+            separator = ' ',
+          },
           color = { fg = "#98be65", gui = "bold" },
         },
       },
